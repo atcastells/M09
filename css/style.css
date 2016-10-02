@@ -1,15 +1,47 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
 html{
-    height: 100%;
+    box-sizing: border-box;
+    height:100%;
+}
+html,body { min-height: 100%; }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body{
-    margin: initial !important;
-    background: url("../img/Video-Game-Controller-Icon.png") no-repeat bottom right;
+    background: #3E2723 url(../img/Video-Game-Controller-Icon.png) no-repeat bottom right;
     background-size: 100px;
+    background-position: 100% 90%;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding:0;
+    height:100%;
+
 }
 
+#footer{
+    height:10%;
+}
 #header{
     background: #F44336;
+    position: relative;
+}
+
+#header:before{
+    content: "\f11b";
+    font-family:FontAwesome;
+    color: white;
+    font-size: 50px;
+    left:50px;
+    position: absolute;
 }
 
 #header nav{
@@ -29,19 +61,75 @@ body{
 
 #header nav a:not(.logo){
     text-decoration: none;
-    padding:10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
     display: inline-block;
     color: white;
+    position: relative;
+    cursor:pointer;
+    font-family: 'Yatra One', cursive;
+}
+a.home:hover::before{
+    content: "\f112";
+    font-family:FontAwesome;
+    bottom:-30px;
+    position: absolute;
+    color: #F44336;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+a.sitemap:hover::before{
+    content: "\f0e8";
+    font-family:FontAwesome;
+    bottom:-30px;
+    position: absolute;
+    color: #F44336;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+a.partners:hover::before{
+    content: "\f0c0";
+    font-family:FontAwesome;
+    bottom:-30px;
+    position: absolute;
+    color: #F44336;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
 }
 
-a.goal:before{
-    content: ""
+a.social:hover::before{
+    content: "\f1a1";
+    font-family:FontAwesome;
+    bottom:-30px;
+    position: absolute;
+    color: #F44336;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
+}
+
+a.contact:hover::before{
+    content: "\f0e5";
+    font-family:FontAwesome;
+    bottom:-30px;
+    position: absolute;
+    color: #F44336;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+
 }
 
 #content{
     width: 88%;
     margin:0 auto;
-    background: white;
 }
 
 #news{
@@ -50,22 +138,159 @@ a.goal:before{
 }
 #news h2{
     margin:initial;
+    color: white;
+    font-family: 'Yatra One', cursive;
+}
+.partners    h2{
+    margin:initial;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Yatra One', cursive;
+}
+
+.social    h2{
+    margin:initial;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Yatra One', cursive;
 }
 
 #news article{
     width: 27%;
     display: inline-block;
     vertical-align: text-top;
-    background: #EF5350;
-    color: white;
+    background: white;
+    color: black;
     margin-bottom: 25px;
 }
 article h3{
     text-align: center;
+    background:#F44336;
+    color: white;
+    margin:initial;
+    padding: 10px;
+    font-family: 'Yatra One', cursive;
 }
 
 #news article p{
     padding:10px;
     -ms-text-align-last: right;
     text-align: justify;
+    font-family: 'Space Mono', monospace;
+}
+
+/*SITEMAP*/
+#Sitemap{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    margin-top:50px;
+}
+
+#Sitemap h2{
+    margin:initial;
+    font-family: 'Yatra One', cursive;
+}
+
+#Sitemap > ul{
+    display: inline-block;
+    font-size: 20px;
+    padding:20px;
+}
+
+#Sitemap li{
+    list-style: none;
+}
+#Sitemap a{
+    text-decoration: none;
+
+}
+
+#Sitemap ul:not(.submenu) > li:first-child a{
+    font-weight:bold;
+    color: white;
+}
+
+ul.submenu > li{
+    position:relative;
+
+}
+
+ul.submenu > li a{
+    color: white;
+
+}
+
+.partners img{
+    height:100px;
+    width:auto;
+    background: white;
+    padding:10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+#content{
+ padding-bottom: 42px;
+}
+.partners #content{
+    text-align: center;
+}
+
+/*Social*/
+
+#content .social{
+    text-align: center;
+}
+
+#content .social i{
+    font-size: 40px;
+    padding:20px;
+    color: white;
+}
+
+
+/*FOOTER*/
+#footer{
+    background: #F44336;
+    text-align: center;
+}
+
+#footer i{
+    color: white;
+    font-size:20px;
+}
+
+
+.wrapper{
+    min-height: 100%;
+    position: relative;
+
+
+}
+#footer {
+    width: 100%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#wrapper {
+    min-height:100%;
+    position:relative;
+}
+
+/*Contact*/
+
+
+#content form label{
+    color: white;
+}
+
+div.contact{
+    -ms-text-align-last: right;
+    text-align: center;
 }
