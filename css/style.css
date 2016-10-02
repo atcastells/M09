@@ -1,0 +1,71 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: initial !important;
+    background: url("../img/Video-Game-Controller-Icon.png") no-repeat bottom right;
+    background-size: 100px;
+}
+
+#header{
+    background: #F44336;
+}
+
+#header nav{
+    text-align: center;
+    position: relative;
+    width:50%;
+    margin: 0 auto;
+}
+
+#header nav i{
+    position: absolute;
+    left:-34px;
+    color: white;
+    font-size: 34px;
+
+}
+
+#header nav a:not(.logo){
+    text-decoration: none;
+    padding:10px;
+    display: inline-block;
+    color: white;
+}
+
+a.goal:before{
+    content: ""
+}
+
+#content{
+    width: 88%;
+    margin:0 auto;
+    background: white;
+}
+
+#news{
+    margin-top:50px;
+    text-align: center;
+}
+#news h2{
+    margin:initial;
+}
+
+#news article{
+    width: 27%;
+    display: inline-block;
+    vertical-align: text-top;
+    background: #EF5350;
+    color: white;
+    margin-bottom: 25px;
+}
+article h3{
+    text-align: center;
+}
+
+#news article p{
+    padding:10px;
+    -ms-text-align-last: right;
+    text-align: justify;
+}
